@@ -12,19 +12,19 @@
 
 <body class="bg-dark">
     <!-- Nous allons afficher ici les nombres et les operateurs -->
-    <div class="screen bg-light">
-        <div id="nb1" class="display text-secondary">0</div>
-        <div id="operator" class="display text-secondary"></div>
-        <div id="nb2" class="display text-secondary"></div>
-        <div id="result" class="display"></div>
+    <div class="screen bg-light text-end">
+        <div id="nb1" class="display text-secondary pe-2">0</div>
+        <div id="operator" class="display text-secondary pe-2"></div>
+        <div id="nb2" class="display text-secondary pe-2"></div>
+        <div id="result" class="display p-2"></div>
     </div>
 
 
-    <div class="clavier">
-        <div class="row">
-            <button id="btnac" class="col btn btn-danger">AC</button>
+    <div class="clavier bg-dark">
+        <div class="row row-cols-4 m-0 pt-1 px-1 ac-btn">
+            <button id="btnac" class="col btn btn-danger text-dark fw-bold fs-3">AC</button>
         </div>
-        <div class="row row-cols-4 g-3 px-2">
+        <div class="row row-cols-4 g-1 px-1 m-0 all-btn">
             <button id="btn7" class="col nb btn btn-secondary">7</button>
             <button id="btn8" class="col nb btn btn-secondary">8</button>
             <button id="btn9" class="col nb btn btn-secondary">9</button>
@@ -42,7 +42,7 @@
 
             <button id="btn0" class="nb col btn btn-secondary">0</button>
             <button id="btncomma" class="nb col btn btn-secondary">.</button>
-            <button id="btnequal" class="col btn btn-warning">=</button>
+            <button id="btnequal" class="col btn btn-light">=</button>
             <button id="btnplus" class="operator col btn btn-warning">+</button>
         </div>
     </div>

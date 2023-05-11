@@ -1,10 +1,28 @@
 
 .screen {
-    height: 20vh;
+    height: 30vh;
+}
+
+.clavier {
+    height: 70vh;
+}
+
+.ac-btn {
+    height: 20%;
+}
+
+.all-btn {
+    height: 80%;
 }
 
 .display {
     height: 25%;
+    font-size: 2rem;
+}
+
+.all-btn button {
+    height: 23%;
+    font-weight: bold;
     font-size: 2rem;
 }
 
