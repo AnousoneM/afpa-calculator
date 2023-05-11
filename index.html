@@ -7,35 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Calculatrice</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body>
-    <div id="affichage">
-        <div id="nb1" class="display"></div>
-        <div id="operator" class="display"></div>
-        <div id="nb2" class="display"></div>
+<body class="bg-dark">
+    <!-- Nous allons afficher ici les nombres et les operateurs -->
+    <div class="screen bg-light">
+        <div id="nb1" class="display text-secondary">0</div>
+        <div id="operator" class="display text-secondary"></div>
+        <div id="nb2" class="display text-secondary"></div>
         <div id="result" class="display"></div>
     </div>
+
+
     <div class="clavier">
-        <div class="buttons">
-            <button id="btnac">AC</button>
-            <br>
-            <button id="btn7" class="nb">7</button><button id="btn8" class="nb">8</button><button id="btn9" class="nb">9</button><button
-                id="btnby" class="operator">x</button>
-            <br>
-            <button id="btn4" class="nb">4</button><button id="btn5" class="nb">5</button><button id="btn6" class="nb">6</button><button
-                id="btndivide" class="operator">/</button>
-            <br>
-            <button id="btn1" class="nb">1</button><button id="btn2" class="nb">2</button><button id="btn3" class="nb">3</button><button
-                id="btnminus" class="operator">-</button>
-            <br>
-            <button id="btn0" class="nb">0</button><button id="btncomma" class="nb">.</button><button id="btnequal">=</button><button
-                id="btnplus" class="operator">+</button>
+        <div class="row">
+            <button id="btnac" class="col btn btn-danger">AC</button>
+        </div>
+        <div class="row row-cols-4 g-3 px-2">
+            <button id="btn7" class="col nb btn btn-secondary">7</button>
+            <button id="btn8" class="col nb btn btn-secondary">8</button>
+            <button id="btn9" class="col nb btn btn-secondary">9</button>
+            <button id="btnby" class="col operator btn btn-warning">x</button>
+
+            <button id="btn4" class="nb col btn btn-secondary">4</button>
+            <button id="btn5" class="nb col btn btn-secondary">5</button>
+            <button id="btn6" class="nb col btn btn-secondary">6</button>
+            <button id="btndivide" class="operator col btn btn-warning">/</button>
+
+            <button id="btn1" class="nb col btn btn-secondary">1</button>
+            <button id="btn2" class="nb col btn btn-secondary">2</button>
+            <button id="btn3" class="nb col btn btn-secondary">3</button>
+            <button id="btnminus" class="operator col btn btn-warning">-</button>
+
+            <button id="btn0" class="nb col btn btn-secondary">0</button>
+            <button id="btncomma" class="nb col btn btn-secondary">.</button>
+            <button id="btnequal" class="col btn btn-warning">=</button>
+            <button id="btnplus" class="operator col btn btn-warning">+</button>
         </div>
     </div>
 
-
-
+    <!-- Appel de notre JS -->
     <script src="assets/js/script.js"></script>
 </body>
 
