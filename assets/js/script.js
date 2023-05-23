@@ -1,4 +1,4 @@
-// Déclaration des élements que nous stockons dans des variables respectives
+// Déclaration des élements du DOM que nous stockons dans des variables respectives
 let nb1 = document.querySelector("#nb1")
 let nb2 = document.querySelector("#nb2")
 let operator = document.querySelector("#operator")
@@ -10,12 +10,12 @@ let display = nb1
 // On définit le nombre de virgule à 0
 let virgule = 0
 
-// on selectionne tous les éléments de classe .nb
+// on selectionne tous les éléments de classe .nb que nous stockons dans la variable myNb
 const myNb = document.querySelectorAll('.nb')
 
 // je parcours le tableau myNb pour y ajouter un eventlistener au click à l'aide d'un forEach
 myNb.forEach(element => {
-    // au click j'affiche le contenu du bouton (element.inner) dans display (display.innerText)
+    // au click j'affiche le contenu du bouton (element.inner) dans l'élément 'display' (display.innerText)
     element.addEventListener('click', function () {
 
         // gestion de la virgule : Pour ne pas que ce soit possible d'en mettre 2 à la suite
@@ -24,12 +24,19 @@ myNb.forEach(element => {
                 display.innerText += element.innerText
                 virgule = 1
             }
+            // gestion du zero, pour ne pas pouvoir de mettre plusieurs zéro au debut
+        } else if (element.innerText == '0') {
+            if (display.innerText != '0') {
+                display.innerText += element.innerText
+            }
         } else {
-            display.innerText += element.innerText
+            if(display.innerText == '0'){
+                display.innerText = element.innerText
+            } else {
+                display.innerText += element.innerText
+            }
+            
         }
-
-        // gestion du zero, pour ne pas pouvoir de mettre plusieurs zéro
-
 
     })
 })
@@ -50,16 +57,16 @@ myOperator.forEach(element => {
     })
 })
 
-// On déclare notre variable btnac qui sera notre bouton Ac
+// On déclare notre variable btnac qui sera notre bouton AC
 let btnac = document.getElementById("btnac")
 
-// on ajoute un écouteur d'évenement au click
+// on ajoute un écouteur d'évenement au click sur le bouton AC
 btnac.addEventListener("click", function () {
     // On réinitialise toutes les valeurs
-    nb1.innerText = ""
-    operator.innerText = ""
-    nb2.innerText = ""
-    result.innerText = ""
+    nb1.innerText = '0'
+    operator.innerText = ''
+    nb2.innerText = ''
+    result.innerText = ''
 
     display = nb1
     virgule = 0
