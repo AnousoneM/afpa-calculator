@@ -35,7 +35,6 @@ myNb.forEach(element => {
             } else {
                 display.innerText += element.innerText
             }
-            
         }
 
     })
